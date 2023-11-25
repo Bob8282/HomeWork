@@ -30,3 +30,29 @@
 // }
 // Console.WriteLine($"Заданный массив: [{string.Join("; ", array)}]");
 // Console.WriteLine(counter);
+
+// // //Задание №3
+// // Задайте массив из вещественных чисел с ненулевой дробной частью. 
+// // Найдите разницу между максимальным и минимальным элементов массива.
+// Console.Write ("Введите размер массива: ");
+// int size = Convert.ToInt32 (Console.ReadLine());
+// double[] array = new double[size];
+// double max;
+// double min;
+// for (int i = 0; i < size; i++)
+// {
+//     // array[i] = Convert.ToDouble(new Random().Next(11, 101) / 10.0);
+//     array[i] = Math.Round(new Random().NextDouble() * new Random().Next(1001), 2);
+// }
+// max = array[0];
+// min = array[0];
+// for (int i = 0; i<size; i++)
+// {
+//         if (array[i] > max)
+//             max = array[i];
+//         else if (array[i] < min)
+//             min = array[i];
+// }
+// Console.WriteLine($"Заданный массив: [{string.Join("; ", array)}]");
+// Console.WriteLine($"Максимум: {max}, минимум: {min}");
+// Console.WriteLine($"Разница: {max - min}");
