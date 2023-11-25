@@ -31,7 +31,7 @@
 // Console.WriteLine($"Заданный массив: [{string.Join("; ", array)}]");
 // Console.WriteLine(counter);
 
-// // //Задание №3
+// //Задание №3
 // // Задайте массив из вещественных чисел с ненулевой дробной частью. 
 // // Найдите разницу между максимальным и минимальным элементов массива.
 // Console.Write ("Введите размер массива: ");
@@ -56,3 +56,28 @@
 // Console.WriteLine($"Заданный массив: [{string.Join("; ", array)}]");
 // Console.WriteLine($"Максимум: {max}, минимум: {min}");
 // Console.WriteLine($"Разница: {max - min}");
+
+//Задание №4
+// Дано натуральное число в диапазоне от 1 до 100 000. 
+// Создайте массив, состоящий из цифр этого числа. Старший разряд числа должен располагаться на 0-м индексе массива, 
+// младший – на последнем. 
+// Размер массива должен быть равен количеству цифр.
+while (true)
+{
+    Console.WriteLine ("Введите число от 1 до 100000: ");
+    var stringNumber = Console.ReadLine();
+    int size = Convert.ToInt32(stringNumber.Length);
+    int[] array = new int [size];
+    bool isNum = int.TryParse(stringNumber, out int number);
+    if (isNum)
+    {
+        for (int i = 0; i < size; i++)
+        {
+            array[i] = Convert.ToInt32(stringNumber[i].ToString());
+        }
+    Console.WriteLine($"Массив: [{string.Join("; ", array)}]");
+    break;
+    }
+    else 
+        Console.WriteLine("Введены некорректные данные!");
+}
