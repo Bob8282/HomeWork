@@ -7,7 +7,7 @@
 
 // int[] array = new int [10];
 // int searchNumber = 0;
-// for (int i = 0; i<10; i++)
+// for (int i = 0; i < 10; i++)
 // {
 //     array[i]= new Random().Next(1, 101);
 //     if (array[i] >= 20 && array[i] <= 90)
@@ -15,3 +15,18 @@
 // }
 // Console.WriteLine ($"Заданный массив: [{string.Join("; ", array)}]");
 // Console.WriteLine (searchNumber);
+
+// //Задание №2
+// // Задайте массив на 10 целых чисел. Напишите программу, 
+// // которая определяет количество чётных чисел в массиве.
+// int[] array = new int[10];
+// int counter = 0;
+// for (int i = 0; i < 10; i++)
+// {
+//     array[i] = new Random().Next(101);
+    
+//     if (array[i] % 2 == 0)
+//         counter += 1;
+// }
+// Console.WriteLine($"Заданный массив: [{string.Join("; ", array)}]");
+// Console.WriteLine(counter);
