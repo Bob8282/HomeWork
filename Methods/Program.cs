@@ -50,7 +50,7 @@ using System.ComponentModel;
 // Задача 2: Задайте массив заполненный случайными трёхзначными числами. 
 // Напишите программу, которая покажет количество чётных чисел в массиве.
 
-
+using arrays_00; // попробовал подключить метод из другого класса
 // int[] ArrayCreation(int size)
 // {
 //     int[] array = new int [size];
@@ -61,8 +61,6 @@ using System.ComponentModel;
 //     }
 //     return array;
 // }
-
-using arrays_00; // попробовал подключить метод из другого класса
 
 // int EvenCounting(int[] array)
 // {
@@ -75,12 +73,36 @@ using arrays_00; // попробовал подключить метод из д
 //     return count;
 // }
 
-Console.WriteLine("Введите размер массива: ");
-int size;
-bool isNum = int.TryParse(Console.ReadLine(), out size);
-int[] array = arrays.ArrayCreation(size);
-if (isNum)
+// while (true)
+// Console.WriteLine("Введите размер массива: ");
+// int size;
+// bool isNum = int.TryParse(Console.ReadLine(), out size);
+// int[] array = arrays.ArrayCreation(size);
+// if (isNum)
+// {
+//     Console.WriteLine($"Массив: [{string.Join("; ", array)}]");
+//     Console.WriteLine($"Количество четных чисел: {arrays.EvenCounting(array)}");
+//     break;  
+// }
+// else 
+//     Console.WriteLine("Введенно некорректное значение или 0!\nВведите корректные данные!");
+
+
+// Задача 3: Напишите программу, которая перевернёт одномерный массив 
+// (первый элемент станет последним, второй – предпоследним и т.д.)
+
+while (true)
 {
-    Console.WriteLine($"Массив: [{string.Join("; ", array)}]");
-    Console.WriteLine($"Количество четных чисел: {arrays.EvenCounting(array)}");
+    Console.WriteLine("Введите размер массива: ");
+    int size;
+    bool isNum = int.TryParse(Console.ReadLine(), out size);
+    int[] array = arrays.ArrayCreation(size);
+    if (isNum && size != 0)
+    {
+        Console.WriteLine($"Исходный массив: [{string.Join("; ", array)}]");
+        Console.WriteLine($"Исходный массив: [{string.Join("; ", arrays.ArrRev(array))}]");
+        break;
+    }
+    else 
+        Console.WriteLine("Введенно некорректное значение или 0!\nВведите корректные данные!");
 }

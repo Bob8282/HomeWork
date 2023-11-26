@@ -1,4 +1,6 @@
 
+using System.Reflection.Metadata.Ecma335;
+
 namespace arrays_00
 {
     public class arrays
@@ -21,5 +23,16 @@ namespace arrays_00
             }
             return count;
         }
+
+        public static int[] ArrRev(int[] array)
+        {   
+            int[] arrRev = new int [array.Length];
+            for(int j = 0, i = array.Length - 1; i >= 0; i--, j++)
+                {
+                    arrRev[j] = array [i];
+                }
+                return arrRev;
+        }
+        
     }
 }
