@@ -24,7 +24,7 @@
 // for (int i = 0; i < 10; i++)
 // {
 //     array[i] = new Random().Next(101);
-    
+
 //     if (array[i] % 2 == 0)
 //         counter += 1;
 // }
@@ -73,7 +73,7 @@
 //     {
 //         for (int i = 0; i < size; i++)
 //         {
-//             array[i] = Convert.ToInt32(stringNumber[i].ToString());
+//             array[i] = int.Parse(stringNumber[i].ToString());
 //         }
 //     Console.WriteLine($"Массив: [{string.Join("; ", array)}]");
 //     break;
@@ -81,3 +81,35 @@
 //     else 
 //         Console.WriteLine("Введены некорректные данные!");
 // }
+
+
+using System.Diagnostics.CodeAnalysis;
+
+while (true)
+{
+    Console.WriteLine ("Введите число от 1 до 100000: ");
+    var stringNumber = Console.ReadLine();
+    int[] array = new int [stringNumber.Length];
+    int number = stringNumber.Select<int>(Int32.Parse(stringNumber)).ToArray();
+//     bool isNum = int.TryParse(stringNumber, out int number);
+//     if (isNum)
+//     {
+//         for (int i = 0; i < stringNumber.Length; i++)
+//         {
+//             array[i] = char.Parse(number.ToString());
+//         }
+//     Console.WriteLine($"Массив: [{string.Join("; ", array)}]");
+//     break;
+//     }
+//     else 
+//         Console.WriteLine("Введены некорректные данные!");
+// }
+
+//  string test = "123456789";
+//             int resultParse = int.Parse(test[0].ToString());
+//             //int firstValue = Convert.ToInt32(test[0]);
+
+//             Console.WriteLine("Перевод элемента строки в число c помощью Parse");
+
+//             //Console.WriteLine($"Без конвертации в число: {firstValue}"); // 49, код цифры "1" в кодировке ASCII
+//             Console.WriteLine($"Способ 1(int.Parse): {resultParse}");
