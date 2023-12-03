@@ -21,6 +21,23 @@ using System.ComponentModel;
 //     else
 //         return 0;
 // }
+
+// int SumCheck(string? number)
+// {
+//     int sum = 0;
+//     bool isNum = int.TryParse(number, out int check);
+//     if (isNum)
+//     {
+//         for (int i = 0; i < number.Length; i++)
+//         {
+//             sum = sum + int.Parse(number[i].ToString());
+//         }
+//         return sum;
+//     }
+//     else
+//         return 0;
+// }
+
 // // Цикл
 //  while (true)
 //  {
@@ -91,6 +108,22 @@ using arrays_00; // попробовал подключить метод из д
 // Задача 3: Напишите программу, которая перевернёт одномерный массив 
 // (первый элемент станет последним, второй – предпоследним и т.д.)
 
+// while (true)
+// {
+//     Console.WriteLine("Введите размер массива: ");
+//     int size;
+//     bool isNum = int.TryParse(Console.ReadLine(), out size);
+//     int[] array = arrays.ArrayCreation(size);
+//     if (isNum && size != 0)
+//     {
+//         Console.WriteLine($"Исходный массив: [{string.Join("; ", array)}]");
+//         Console.WriteLine($"Исходный массив: [{string.Join("; ", arrays.ArrRev(array))}]");
+//         break;
+//     }
+//     else 
+//         Console.WriteLine("Введенно некорректное значение или 0!\nВведите корректные данные!");
+// }
+
 while (true)
 {
     Console.WriteLine("Введите размер массива: ");
@@ -100,7 +133,7 @@ while (true)
     if (isNum && size != 0)
     {
         Console.WriteLine($"Исходный массив: [{string.Join("; ", array)}]");
-        Console.WriteLine($"Исходный массив: [{string.Join("; ", arrays.ArrRev(array))}]");
+        Console.WriteLine($"Исходный массив: [{string.Join("; ", arrays.RevPair(array))}]");
         break;
     }
     else 

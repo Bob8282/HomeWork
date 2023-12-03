@@ -1,0 +1,14 @@
+C:\Учеба\geek\HomeWork\twoWayMatrix\obj\Debug\net7.0\twoWayMatrix.GeneratedMSBuildEditorConfig.editorconfig
+C:\Учеба\geek\HomeWork\twoWayMatrix\obj\Debug\net7.0\twoWayMatrix.AssemblyInfoInputs.cache
+C:\Учеба\geek\HomeWork\twoWayMatrix\obj\Debug\net7.0\twoWayMatrix.AssemblyInfo.cs
+C:\Учеба\geek\HomeWork\twoWayMatrix\obj\Debug\net7.0\twoWayMatrix.csproj.CoreCompileInputs.cache
+C:\Учеба\geek\HomeWork\twoWayMatrix\bin\Debug\net7.0\twoWayMatrix.exe
+C:\Учеба\geek\HomeWork\twoWayMatrix\bin\Debug\net7.0\twoWayMatrix.deps.json
+C:\Учеба\geek\HomeWork\twoWayMatrix\bin\Debug\net7.0\twoWayMatrix.runtimeconfig.json
+C:\Учеба\geek\HomeWork\twoWayMatrix\bin\Debug\net7.0\twoWayMatrix.dll
+C:\Учеба\geek\HomeWork\twoWayMatrix\bin\Debug\net7.0\twoWayMatrix.pdb
+C:\Учеба\geek\HomeWork\twoWayMatrix\obj\Debug\net7.0\twoWayMatrix.dll
+C:\Учеба\geek\HomeWork\twoWayMatrix\obj\Debug\net7.0\refint\twoWayMatrix.dll
+C:\Учеба\geek\HomeWork\twoWayMatrix\obj\Debug\net7.0\twoWayMatrix.pdb
+C:\Учеба\geek\HomeWork\twoWayMatrix\obj\Debug\net7.0\twoWayMatrix.genruntimeconfig.cache
+C:\Учеба\geek\HomeWork\twoWayMatrix\obj\Debug\net7.0\ref\twoWayMatrix.dll

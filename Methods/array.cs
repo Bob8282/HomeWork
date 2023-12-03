@@ -5,6 +5,7 @@ namespace arrays_00
 {
     public class arrays
     {
+        
         public static int[] ArrayCreation(int size)
         {
             int[] array = new int [size];
@@ -34,5 +35,17 @@ namespace arrays_00
                 return arrRev;
         }
         
+        public static int[] RevPair(int[] array)
+        {   
+            int temp = 0;
+            int[] arrRev = new int [array.Length];
+            for(int j = 0, i = array.Length - 1; j < array.Length / 2; i--, j++)
+                {
+                    temp = array[j];
+                    array[j] = array[i];
+                    array[i] = temp;
+                }
+                return array;
+        }
     }
 }
