@@ -29,21 +29,13 @@ using TryTo_00;
 // в которой слова расположены в обратном порядке. 
 // В полученной строке слова должны быть также разделены пробелами.
 
-int Count (string stringSource)
-        {
-            int count = 1;
-            for (int i = 0; i < stringSource.Length; i++)
-            {
-                if (stringSource[i] == ' ')
-                {
-                    count +=1;
-                }
-            }
-            return count;
-        }
+
+// Вариант 1
+// string stringSource = Console.ReadLine();
+// string result = TryTo.StringReverse(stringSource);
+// Console.WriteLine($"{String.Join(" ", result)}");
 
 
-        
 string stringSource = Console.ReadLine(); 
 // int count = Count(stringSource);
 string[] res = TryTo.Str(stringSource);

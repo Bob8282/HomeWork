@@ -2,6 +2,26 @@ namespace TryTo_00
 {
     public class TryTo
     {
+
+        // с использованием Split 
+        public static string StringReverse(string stringSource)
+        {
+            string[] array = stringSource.Split(" ");
+            string revStr = string.Empty;
+            string sign = string.Empty;
+            for (int i = 0, j = array.Length-1; i < array.Length/2; i++, j--)
+            {
+                    sign = array[i];
+                    array[i] = array[j];
+                    array[j] = sign;
+            }
+            revStr = String.Join(" ", array); 
+            return revStr;
+        }      
+
+
+
+        // попытка без Splita
         public static string[] Str(string stringSource)
         {
             int count = 1;
@@ -15,35 +35,23 @@ namespace TryTo_00
             string[] strArr = new string[count];
 
             string sign = string.Empty;
-            int j = 0;
-            for (int i = 0; i < count; i++)
-            {
-                for (j = 0; j < stringSource.Length; j++)
+            // for (int i = 0; i < count; i++)
+            // {
+                for (int j = 0; j < stringSource.Length; j++)
                 {
-                    // while (stringSource[j] != stringSource[stringSource.Length - 1])
+                    //while (stringSource[j] != ' ')
                     
                     if (stringSource[j] != ' ')
-                        {
-                            sign = sign + stringSource[j];
-                        }
-                    else
                     {
-                        strArr[i] = sign;
-                        
-
-                        if (sign != string.Empty)
-                        {
-                            sign = string.Empty;
-                            continue;
-                        }
+                        strArr[i] += stringSource[j];                   
                     }
-                    if (j == stringSource.Length-1)
-                        strArr[i] = sign;
+                    else continue;  
+                
                     
                 }
-                
-            }
-            return strArr;        
+                return strArr;
+        }
+                    
         }
     }
 }

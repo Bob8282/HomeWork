@@ -5,6 +5,7 @@ namespace CharArray_00
 {
     class CharArray
     {
+        // Создание массива из рандомных символов
     public static char[,] CreateCharMatrix(int rows, int columns)
         {
             char[,] result = new char[rows, columns];
@@ -21,7 +22,7 @@ namespace CharArray_00
             }
             return result;
         }
-
+    // перевод массива в строку символов
     public static string StringFromMatrix(char[,] chars)
         {
             string resultString = string.Empty;
@@ -37,6 +38,7 @@ namespace CharArray_00
             return resultString;
         }
     
+    //Приведение символов к нижнему регистру
     public static string LowerString (string sourceString)
         {
             string result = string.Empty;
@@ -63,6 +65,8 @@ namespace CharArray_00
                 Console.WriteLine();
             }
         }
+
+        //Проверка на палиндром
     public static void PalindromCheck(string str)
         {
             string rts = string.Empty;
@@ -75,33 +79,5 @@ namespace CharArray_00
             else
                 Console.WriteLine($"Строка {str} не является палиндромом");
         }
-    public static string StringReverse(string stringSource)
-        {
-            //string[] array = stringSource.Split(" ");
-            string revStr = string.Empty;
-            int count = 0;
-            for (int i = 0; i < stringSource.Length; i++)
-            {
-                if (stringSource[i] == ' ')
-                {
-                    count +=1;
-                }
-            }
-            string[] strArr = new string[count];
-            
-            string sign = string.Empty;
-            for (int i = 0; i < count; i++)
-            {
-                for (int j = 0; j < stringSource.Length; j++)
-                    if (stringSource[j] != ' ')
-                        sign = sign + stringSource[j];
-                    else 
-                        continue;
-                strArr[i] = sign;
-            }
-
-            
-            return revStr;
-        }      
     }
 }
