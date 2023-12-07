@@ -34,7 +34,17 @@
 // Задача 3: Задайте прямоугольный двумерный массив. 
 // Напишите программу, которая будет находить строку 
 // с наименьшей суммой элементов.
-
+Console.WriteLine("Введите количество строк: ");
+int row = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите количество столбцов: ");
+int column = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите минимальное значение: ");
+int minValue = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите Максимальное значение: ");
+int maxValue = Convert.ToInt32(Console.ReadLine());
+int[,] matrix = Matrix.CreateMatrix (row, column, minValue, maxValue);
+Matrix.PrintMatrix(matrix);
+Console.WriteLine($"Номер строки с минимальной суммой: {Matrix.MinimalSum(matrix)}");
 
 // // Задача 4*(не обязательная): Задайте двумерный массив из целых чисел. 
 // // Напишите программу, которая удалит строку и столбец, на пересечении 

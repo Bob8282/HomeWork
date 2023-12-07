@@ -1,4 +1,5 @@
 ﻿using CharArray_00;
+using TryTo_00;
 
 // // Задача 1: Задайте двумерный массив символов (тип char [,]). 
 // // Создать строку из символов этого массива.
@@ -13,31 +14,38 @@
 // Задача 2: Задайте строку, содержащую латинские 
 // буквы в обоих регистрах. Сформируйте строку, 
 // в которой все заглавные буквы заменены на строчные.
-Console.WriteLine("Введите строку: ");
-string source = Console.ReadLine();
-Console.WriteLine($"Результат: {CharArray.LowerString(source)}");
+// Console.WriteLine("Введите строку: ");
+// string source = Console.ReadLine();
+// Console.WriteLine($"Результат: {CharArray.LowerString(source)}");
 
+// // Задача 3: Задайте произвольную строку. 
+// // Выясните, является ли она палиндромом.
+// Console.WriteLine("Введите строку: ");
+// string source = Console.ReadLine();
+// CharArray.PalindromCheck(source);
 
-
-
-
-
-
-
-
-
-// Задача 2: Задайте строку, содержащую латинские буквы 
-// в обоих регистрах. Сформируйте строку, в которой 
-// все заглавные буквы заменены на строчные.
-
-
-
-
-// Задача 3: Задайте произвольную строку. 
-// Выясните, является ли она палиндромом.
-
-
-
-// Задача 4*(не обязательная): Задайте строку, состоящую из слов, разделенных пробелами. 
-// Сформировать строку, в которой слова расположены в обратном порядке. 
+// Задача 4*(не обязательная): Задайте строку, состоящую из слов, 
+// разделенных пробелами. Сформировать строку, 
+// в которой слова расположены в обратном порядке. 
 // В полученной строке слова должны быть также разделены пробелами.
+
+int Count (string stringSource)
+        {
+            int count = 1;
+            for (int i = 0; i < stringSource.Length; i++)
+            {
+                if (stringSource[i] == ' ')
+                {
+                    count +=1;
+                }
+            }
+            return count;
+        }
+
+
+        
+string stringSource = Console.ReadLine(); 
+// int count = Count(stringSource);
+string[] res = TryTo.Str(stringSource);
+Console.WriteLine($"{String.Join("; ", res)}");
+// Console.WriteLine(count);

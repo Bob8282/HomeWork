@@ -1,4 +1,5 @@
 using System.Linq.Expressions;
+using System.Runtime.Serialization.Formatters;
 
 namespace CharArray_00
 {
@@ -8,7 +9,7 @@ namespace CharArray_00
         {
             char[,] result = new char[rows, columns];
             int number = 0;
-            char[] letters = "abcdefghijklmnoparstuvwxyz".ToCharArray();
+            char[] letters = "abcdefghijklmnoparstuvwxyz".ToCharArray(); // Эту строку подсмотрел)))
             for (int i = 0; i< result.GetLength(0); i++)
             {
                 for (int j = 0; j < result.GetLength(1); j++)
@@ -62,8 +63,45 @@ namespace CharArray_00
                 Console.WriteLine();
             }
         }
+    public static void PalindromCheck(string str)
+        {
+            string rts = string.Empty;
+            for (int i = str.Length - 1; i >= 0; i--)
+                {
+                    rts = rts + str[i];
+                }
+            if (rts == str)
+                Console.WriteLine($"Строка {str} является палиндромом");
+            else
+                Console.WriteLine($"Строка {str} не является палиндромом");
+        }
+    public static string StringReverse(string stringSource)
+        {
+            //string[] array = stringSource.Split(" ");
+            string revStr = string.Empty;
+            int count = 0;
+            for (int i = 0; i < stringSource.Length; i++)
+            {
+                if (stringSource[i] == ' ')
+                {
+                    count +=1;
+                }
+            }
+            string[] strArr = new string[count];
+            
+            string sign = string.Empty;
+            for (int i = 0; i < count; i++)
+            {
+                for (int j = 0; j < stringSource.Length; j++)
+                    if (stringSource[j] != ' ')
+                        sign = sign + stringSource[j];
+                    else 
+                        continue;
+                strArr[i] = sign;
+            }
 
-
-
+            
+            return revStr;
+        }      
     }
 }

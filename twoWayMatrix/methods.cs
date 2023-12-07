@@ -1,7 +1,11 @@
+using System.Data.Common;
+using System.Runtime.CompilerServices;
+
 namespace Matrix_00
 {
     public class Matrix
     {
+        // Генерация массива
         public static int[,] CreateMatrix(int rows, int columns, int min, int max)
         {
             int[,] matrix = new int[rows, columns];
@@ -16,6 +20,7 @@ namespace Matrix_00
             return matrix;
         }
 
+        // Вывод массива
         public static void PrintMatrix (int[,] matr)
         {
                 for (int i = 0; i < matr.GetLength(0); i++)
@@ -28,7 +33,7 @@ namespace Matrix_00
             }
         }
 
-
+        // нахождение значения по номеру элемента
         public static int ElementNumber(int row, int column, int[,] matr)
         {
             int result = 0;
@@ -42,9 +47,10 @@ namespace Matrix_00
             return matr[row, column];
 
         }
+
+        // смена места строк
         public static int[,] RowsChange(int[,] matr)
         {
-            // int [,] newMatrix = new int[matr.GetLength(0), matr.GetLength(1)];
             int temp;
         for (int j = 0; j < matr.GetLength(1); j++)
             {
@@ -55,18 +61,34 @@ namespace Matrix_00
         return matr;
         }
 
-        // public static int MinSum(int[,] matr)
-        // {   int sum = 0;
-        //     int minSum = 0;
-        //     for (int i = 0; i < matr.GetLength(0); i++)
-        //     {
-        //         for (int j = 0; j < matr.GetLength(0); j++)
-        //         {
-        //             sum[i]+=matr[i, j];
-        //         }
-        //     }
-        // }
-
+        //нахождение номера строки с минимальной суммой
+        public static int MinimalSum(int[,] matr)
+        {   
+            int[] stringArray = new int [matr.GetLength(0)];
+            int sum = 0;
+            for (int i = 0; i < matr.GetLength(0); i++)
+            {
+                sum = 0;
+                for (int j = 0; j < matr.GetLength(1); j++)
+                {
+                    sum +=matr[i, j];
+                }
+                stringArray[i] = sum;
+            }
+            int min = stringArray[0];
+            int indexMin = 0;
+            for (int i = 0; i < stringArray.Length; i++)
+            {
+                if (stringArray[i] < min)
+            {
+                    min = stringArray[i];
+                    indexMin = i;
+            }
+            }
+            return indexMin;
+        }
+        
+        // поиск индекса минимального элемента
         public static int[] minIndexSearch(int[,] matr)
         {
             int[] resMatrix = new int[2];
@@ -84,7 +106,8 @@ namespace Matrix_00
             }
             return resMatrix;
         }
-
+        
+        // удаление строки и столбца, содержащих мимнимальный элемент
         public static int[,] StringDel(int[,] matr, int[] resMatrix)
         {
             int[,] result = new int[matr.GetLength(0)-1, matr.GetLength(1)-1];
