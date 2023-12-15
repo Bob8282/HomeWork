@@ -34,9 +34,3 @@ int maxValue = Convert.ToInt32(Console.ReadLine());
 int[] array = Recursive.GenerateArray(arrayLen, minValue, maxValue);
 Console.WriteLine(String.Join("; ", array));
 Recursive.ArrayReverseRecursive(array);
-//  public static void ArrayReverseRecursive(int[] array, int i = 0)
-//         {
-//             if (i < array.Length - 1)
-//                 Console.WriteLine(array[array.Length - i]);
-//                 ArrayReverseRecursive(array, i++);
-//         }
